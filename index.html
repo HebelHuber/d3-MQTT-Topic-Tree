@@ -20,8 +20,10 @@
     <script type="text/javascript">
 
 var options = {
-  host: location.hostname,
-  port: parseInt(location.port),
+  //host: location.hostname,
+  host: "broker.hivemq.com",
+  //port: parseInt(location.port),
+  port: 8000,
   clientID: "web" + new Date().getTime(),
   connectOpts: {
     // userName: '',
