@@ -35,7 +35,7 @@ var options = {
   connectOpts: {
     // userName: '',
     // password: '',
-    useSSL: true,
+    useSSL: /ssl=([^&]+)/.exec(url)[1],
     keepAliveInterval: 30,
     timeout: 10,
     cleanSession: false,
