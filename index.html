@@ -19,15 +19,18 @@
     </div>
     <script type="text/javascript">
 	    
-let searchParams = new URLSearchParams(location.url.search);
+//let searchParams = new URLSearchParams(location.url.search);
+var url = window.location.href;
 
 var options = {
   //host: location.hostname,
   //host: "broker.hivemq.com",
-  host: searchParams.get('broker'),
+  //host: searchParams.get('broker'),
+  host: /broker=([^&]+)/.exec(url)[1],
   //port: parseInt(location.port),
   //port: 8000,
-  port: searchParams.get('port'),
+  //port: searchParams.get('port'),
+  port: host: /port=([^&]+)/.exec(url)[1],
   clientID: "web" + new Date().getTime(),
   connectOpts: {
     // userName: '',
