@@ -52,7 +52,7 @@ client.onconnectionlost = onDisconnect;
 
 function onConnect(){
 	client.subscribe('#',onMessage);
-  document.getElementById('status').innerHTML= "";
+  document.getElementById('status').innerHTML= "connected";
 	console.log("mqtt connected");
 }
 
