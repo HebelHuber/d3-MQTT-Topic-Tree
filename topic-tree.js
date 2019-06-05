@@ -41,7 +41,7 @@ function setup(tagID) {
 
 
 function update(source) {
-  var duration = d3.event && d3.event.altKey ? 5000 : 500;
+  var duration = d3.event && d3.event.altKey ? 500 : 500;
 
   // Compute the new tree layout.
   var nodes = tree.nodes(root).reverse();
